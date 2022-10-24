@@ -1,0 +1,148 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+header.header-container {
+  position: relative;
+  /* height: 75rem; */
+}
+.geo-image{
+  position: absolute;
+  top: -230px;
+  left: 0;
+  background: linear-gradient(110deg, #fff 0%, #f4f4f4 75%, #e0e7ef 75%);
+  transform: skewY(-7deg);
+  height: 55rem;
+  width: 100%;
+  z-index: -1;
+}
+
+
+
+.container {
+  width: 100%;
+  padding: 20px 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.navbar {
+display: flex;
+
+}
+
+.navbar.sticky {
+  background: white;
+  box-shadow: 0px 0px 20px rgb(48 63 100 / 20%);
+}
+
+.navbar.sticky .navbar-toggler span,
+.navbar.sticky .navbar-brand
+ {
+  color: #666;
+}
+
+.navbar-toggler {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  outline: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+.navbar-toggler span {
+  color: #666);
+  font-size: 20px;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+[aria-controls='navbarDropdown'] {
+  display: none;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand {
+  margin-right: auto;
+  transition: ease-in-out 0.3s;
+}
+
+.navbar-brand img {
+  height: 60px;
+}
+
+.nav-link a {
+  color: var(--font-color-light);
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  margin-right: 40px;
+  line-height: 20px;
+}
+
+a.btn-primary {
+  color: var(--font-color-white);
+  font-size: var(--size-14);
+  margin-right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  [aria-controls='navbarDropdown'] {
+    display: block;
+  }
+
+  [aria-expanded='false'] ~ ul {
+    display: none;
+  }
+
+  [aria-expanded='true'] ~ ul {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background-image: linear-gradient(
+      to right,
+      transparent,
+      rgba(255, 255, 255, 0.7)
+    );
+    width: 100%;
+    text-align: right;
+    box-shadow: 0px 0px 20px rgb(52 49 75 / 10%);
+  }
+
+  [aria-expanded='true'] ~ ul li a {
+    margin-right: 20px;
+    color: #666;
+  }
+
+}

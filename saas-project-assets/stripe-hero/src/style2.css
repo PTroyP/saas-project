@@ -1,0 +1,6 @@
+.example {
+  background: linear-gradient(110deg, #fff 0%, #f8f9fa 60%, #dfe8ef 60%);
+  transform-origin: 0;
+  transform: skewY(-7deg);
+  height: 500px;
+}
