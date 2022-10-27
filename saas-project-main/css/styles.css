@@ -130,7 +130,7 @@ a.btn-primary {
 }
 
 .hero-text {
-  padding-right: 180px;
+  padding-right: 190px;
 }
 .hero-text h1 {
   font-weight: 400;
@@ -141,7 +141,7 @@ a.btn-primary {
 .hero-text p {
   color: var(--font-color-light);
   font-size: var(--size-14);
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .learn-links {
