@@ -243,7 +243,8 @@ left: 60px;
 }
 
 .benefits--text h2,
-.why--text h2 {
+.why--text h2,
+.pricing-heading h2 {
   font-size: var(--size-30);
 }
 .benefits--text p,
@@ -337,6 +338,7 @@ float: left;
 width: 25%;
 position: relative;
 text-align:center;
+color: var(--font-color-medium);
 }
 
 .timeline li::before {
@@ -370,6 +372,10 @@ text-align:center;
 }
 .timeline li:nth-child(1)::after {
   display: none;
+}
+
+.why--banner {
+  padding-top: var(--size-50);
 }
 
 .testimonial {
@@ -420,6 +426,30 @@ text-align:center;
 .director-title {
   font-size: var(--size-14);
   margin-top: 0;
+  color: var(--font-color-medium);
+}
+
+.trusted-users {
+  margin-top: var(--size-150);
+  text-align: center;
+}
+
+.trusted-users h3 {
+  color: var(--font-color-dark);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.company-users {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--size-100);
+  margin: var(--size-50) 0;
+}
+
+.pricing--info {
+  display: grid;
+  grid-template-columns: 40% 60%;
 
 }
 
