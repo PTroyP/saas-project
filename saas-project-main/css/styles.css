@@ -372,6 +372,56 @@ text-align:center;
   display: none;
 }
 
+.testimonial {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: var(--size-50);
+  margin-top: var(--size-100);
+}
+
+.testimonial--image {
+  position: relative;
+}
+
+.dots {
+  width: 45%;
+    position: absolute;
+    left: 0;
+    bottom: -65px;
+    z-index: -1;
+}
+
+.director-image {
+  width: 90%;
+  float: right;
+}
+
+.testimonial--text {
+  display: flex;
+  align-items: center;
+}
+
+.hubspot-logo {
+  width: 25%;
+}
+
+.testimonial-words {
+  font-size: 1.5rem;
+  color: var(--font-color-medium);
+  margin-bottom: var(--size-50);
+}
+
+.director-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--font-color-medium);
+  margin-bottom: 5px;
+}
+.director-title {
+  font-size: var(--size-14);
+  margin-top: 0;
+
+}
 
 @media screen and (max-width: 768px) {
   [aria-controls='navbarDropdown'] {
