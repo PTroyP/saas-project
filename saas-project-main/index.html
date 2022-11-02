@@ -10,7 +10,9 @@
   <link rel="shortcut icon" href="./images/front.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400&display=swap"
+    rel="stylesheet">
   <script src="https://kit.fontawesome.com/694a53a379.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./css/default.css">
   <link rel="stylesheet" href="./css/styles.css">
@@ -142,8 +144,11 @@
           <li>Page layout</li>
         </ul>
       </div>
-      <div class="why--banner">
-        <img src="./images/banners/banner_two.jpg" alt="example banner">
+      <div class="why--video">
+        <iframe class="responsive-iframe" src="https://www.youtube.com/embed/5BI7WwNBGj4" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
       </div>
       <div class="testimonial">
         <div class="testimonial--image">
@@ -229,7 +234,7 @@
               <h4>Cancel anytime</h4>
               <a class="sketch-btn" href="#">sketch</a>
             </div>
-            <p>If it's not for you, just cancel, no hidden costs or fees.</p>
+            <p class="sketch-link-p">If it's not for you, just cancel, no hidden costs or fees.</p>
           </div>
           <div class="factor">
             <div class="factor-image">
@@ -238,6 +243,74 @@
             <h4>Money back</h4>
             <p>100% guaranteed money back. No questions asked.</p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="hire-us">
+    <div class="hire-us--container">
+      <div class="hire-us--text">
+        <h2>Hire Us</h2>
+        <p>Whatever your goal -<br>
+          we will get you there</p>
+        <hr class="hire-us-hr">
+        <p class="hire-us-testimony">"I love front! I love the ease of use, I love the fact that I have total creative
+          freedom..."</p>
+        <h4>Charlotte Moore</h4>
+        <p>Head of Commercials, Slack</p>
+        <ul class="hire-us-pics">
+          <li><img src="./images/people/woman_two.jpg" alt="woman 2"></li>
+          <li><img src="./images/people/woman_one.jpg" alt="woman 1"></li>
+          <li><img src="./images/people/man_one.jpg" alt="man 1"></li>
+        </ul>
+      </div>
+      <div class="hire-us--form">
+        <div class="form-background">
+          <img src="./images/abstract/hire-us-transparent-pattern-bg.svg" alt="form background">
+        </div>
+        <div class="hire-us-form-content">
+          <form action="">
+            <h4>Fill out the form and we'll be in touch as soon as possible</h4>
+            <div class="name-1">
+              <label for="first-name" name="first-name"></label>
+              <input type="text" id="first-name" placeholder="First name" required>
+              <label for="last-name" name="last-name"></label>
+              <input type="text" id="last-name" placeholder="Last name" required>
+            </div>
+            <div class="name-2">
+              <label for="first-name" name="first-name"></label>
+              <input type="text" id="first-name" placeholder="First name" required>
+              <label for="last-name" name="last-name"></label>
+              <input type="text" id="last-name" placeholder="Last name" required>
+            </div>
+            <div class="budget-country">
+              <label for="budget" name="budget"></label>
+              <select name="budget" id="budget">
+                <option value="budget">Budget</option>
+                <option value="5k">5k - 10k</option>
+                <option value="10k+">10k+</option>
+              </select>
+              <label for="country" name="country"></label>
+              <select name="country" id="country">
+                <option value="country">Country</option>
+                <option value="us">USA</option>
+                <option value="canada">Canada</option>
+              </select>
+            </div>
+            <div class="project-data">
+              <label for="project-data" name="project-data"></label>
+              <textarea name="project-data" id="project-data" cols="30" rows="10"
+                placeholder="Tell us more about your project, needs, and timeline, please..."></textarea>
+            </div>
+            <div class="terms">
+
+              <p> <input type="checkbox" required>
+                Yes, I'd like to receive occasional marketing emails from Front. I have the right to opt out at any
+                time.</p>
+              <p>View privacy policy <a href="#">View privacy policy</a></p>
+            </div>
+            <button class="btn-primary">Get Started</button>
+          </form>
         </div>
       </div>
     </div>
