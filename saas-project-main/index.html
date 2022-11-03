@@ -272,41 +272,55 @@
           <form action="">
             <h4>Fill out the form and we'll be in touch as soon as possible</h4>
             <div class="name-1">
-              <label for="first-name" name="first-name"></label>
-              <input type="text" id="first-name" placeholder="First name" required>
-              <label for="last-name" name="last-name"></label>
-              <input type="text" id="last-name" placeholder="Last name" required>
+              <div class="entry-1">
+                <label for="first-name" name="first-name"></label>
+                <input type="text" id="first-name" placeholder="First name" required>
+              </div>
+              <div class="entry-2">
+                <label for="last-name" name="last-name"></label>
+                <input type="text" id="last-name" placeholder="Last name" required>
+              </div>
             </div>
             <div class="name-2">
-              <label for="first-name" name="first-name"></label>
-              <input type="text" id="first-name" placeholder="First name" required>
-              <label for="last-name" name="last-name"></label>
-              <input type="text" id="last-name" placeholder="Last name" required>
+              <div class="entry-3">
+                <label for="first-name" name="first-name"></label>
+                <input type="text" id="first-name" placeholder="First name" required>
+              </div>
+              <div class="entry-4">
+                <label for="last-name" name="last-name"></label>
+                <input type="text" id="last-name" placeholder="Last name" required>
+              </div>
             </div>
             <div class="budget-country">
-              <label for="budget" name="budget"></label>
-              <select name="budget" id="budget">
-                <option value="budget">Budget</option>
-                <option value="5k">5k - 10k</option>
-                <option value="10k+">10k+</option>
-              </select>
-              <label for="country" name="country"></label>
-              <select name="country" id="country">
-                <option value="country">Country</option>
-                <option value="us">USA</option>
-                <option value="canada">Canada</option>
-              </select>
+              <div class="budget">
+                <label for="budget" name="budget"></label>
+                <select name="budget" id="budget">
+                  <option value="budget">Budget</option>
+                  <option value="5k">5k - 10k</option>
+                  <option value="10k+">10k+</option>
+                </select>
+              </div>
+              <div class="country">
+                <label for="country" name="country"></label>
+                <select name="country" id="country">
+                  <option value="country">Country</option>
+                  <option value="us">USA</option>
+                  <option value="canada">Canada</option>
+                </select>
+              </div>
             </div>
             <div class="project-data">
               <label for="project-data" name="project-data"></label>
-              <textarea name="project-data" id="project-data" cols="30" rows="10"
+              <textarea name="project-data" id="project-data" cols="30" rows="8"
                 placeholder="Tell us more about your project, needs, and timeline, please..."></textarea>
             </div>
             <div class="terms">
-
-              <p> <input type="checkbox" required>
+              <p> <input class="chkbox" type="checkbox" required></p>
+              <p class="terms-text">
                 Yes, I'd like to receive occasional marketing emails from Front. I have the right to opt out at any
                 time.</p>
+            </div>
+            <div class="privacy">
               <p>View privacy policy <a href="#">View privacy policy</a></p>
             </div>
             <button class="btn-primary">Get Started</button>

@@ -553,8 +553,9 @@ section.hire-us {
   background-color: var(--background-blue);
 }
 .hire-us--container {
-  display: flex;
-  gap: var(--size-20);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* gap: var(--size-20); */
 }
 .hire-us--text {
   color: var(--font-color-white);
@@ -577,31 +578,82 @@ section.hire-us {
   grid-row: 1 / 2;
   z-index: 1;
   margin: 30px;
+  margin-left: 50px;
 }
 
 .hire-us-form-content {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   z-index: 2;
-  padding: var(--size-50);
+  padding: 50px 75px 75px 95px;
 }
 
+.hire-us-form-content form {
+
+}
 .hire-us-form-content form h4 {
   font-size: var(--size-20);
+  color: var(--font-color-medium);
+  /* letter-spacing: 0.05rem; */
+  line-height: 1.5;
+}
+
+.hire-us-form-content form h4,
+textarea#project-data,
+.terms p {
+  letter-spacing: 0.05rem;
 }
 
 .name-1,
-.name-2 {
-  text-align: center;
+.name-2,
+.budget-country {
+  display: flex;
+  justify-content: space-between;
+  gap:30px;
+  margin-bottom: 30px;
 }
-.name-1 input#first-name,
-.name-1 input#last-name,
-.name-2 input#first-name,
-.name-2 input#last-name {
-  padding: 10px;
-    font-size: 1.25rem;
-    border-radius: 8px;
-    border-color: var(--font-color-light);
+
+.name-1 > div,
+.name-2 > div, 
+.budget-country > div,
+.project-data {
+  width: 100%;
+  padding: var(--size-18);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+input#first-name,
+input#last-name,
+select#budget,
+select#country,
+textarea#project-data {
+  font-size: var(--size-18);
+  color: var(--font-color-medium);
+  border: none;
+  width: 100%;
+}
+
+.name-1 input#first-name {
+  background-image: none;
+}
+
+textarea#project-data {
+  font-family: 'Roboto', sans-serif;
+}
+
+.terms {
+  display: flex;
+}
+
+input.chkbox {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+p.terms-text {
+  padding-left: var(--size-20);
+  font-size: var(--size-18);
+  line-height: 1.5rem;
 }
 
 @media screen and (max-width: 768px) {
