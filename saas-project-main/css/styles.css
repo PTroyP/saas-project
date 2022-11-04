@@ -554,11 +554,38 @@ section.hire-us {
 }
 .hire-us--container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   /* gap: var(--size-20); */
 }
 .hire-us--text {
   color: var(--font-color-white);
+  padding: var(--size-150) var(--size-100);
+}
+
+.hire-us--text h2 {
+  font-size: var(--size-30);
+}
+
+
+.hire-us--text p {
+  font-size: var(--size-20);
+    color: var(--font-color-light);
+    line-height: 1.5;
+}
+
+.hire-us-hr {
+  width: 50%;
+  margin: var(--size-40) 0;
+}
+
+p.hire-us-testimony {
+  color: var(--font-color-white);
+  font-style: italic;
+}
+
+p.testimony-title {
+  font-size: var(--size-18);
+  margin-top: 0.3125rem;
 }
 
 .hire-us-pics {
@@ -585,7 +612,7 @@ section.hire-us {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   z-index: 2;
-  padding: 50px 75px 75px 95px;
+  padding: 50px 55px 75px 75px;
 }
 
 .hire-us-form-content form {
@@ -618,7 +645,7 @@ textarea#project-data,
 .budget-country > div,
 .project-data {
   width: 100%;
-  padding: var(--size-18);
+  padding: var(--size-14);
   border: 1px solid #ccc;
   border-radius: 8px;
 }
@@ -628,18 +655,19 @@ input#last-name,
 select#budget,
 select#country,
 textarea#project-data {
-  font-size: var(--size-18);
+  font-size: var(--size-14);
   color: var(--font-color-medium);
   border: none;
   width: 100%;
 }
 
-.name-1 input#first-name {
+.entry-1 input#first-name {
   background-image: none;
 }
 
 textarea#project-data {
   font-family: 'Roboto', sans-serif;
+  line-height: 1.5rem;
 }
 
 .terms {
@@ -652,8 +680,9 @@ input.chkbox {
 }
 p.terms-text {
   padding-left: var(--size-20);
-  font-size: var(--size-18);
+  font-size: var(--size-14);
   line-height: 1.5rem;
+  color: var(--font-color-light);
 }
 
 @media screen and (max-width: 768px) {
