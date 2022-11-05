@@ -25,7 +25,7 @@
 }
 
 .btn-primary {
-  display: inline-block;
+  display: block;
   color: var(--font-color-white);
   text-align: center;
   cursor: pointer;

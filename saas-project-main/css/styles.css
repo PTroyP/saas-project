@@ -559,16 +559,20 @@ section.hire-us {
 }
 .hire-us--text {
   color: var(--font-color-white);
-  padding: var(--size-150) var(--size-100);
+  padding: var(--size-150) 5.625rem var(--size-150) var(--size-75);
 }
 
 .hire-us--text h2 {
   font-size: var(--size-30);
 }
 
-
+.hire-us--text h4 {
+  font-size: 1.375rem;
+  margin-bottom: 0;
+  margin-top: var(--size-75);
+}
 .hire-us--text p {
-  font-size: var(--size-20);
+  font-size: var(--size-18);
     color: var(--font-color-light);
     line-height: 1.5;
 }
@@ -580,16 +584,32 @@ section.hire-us {
 
 p.hire-us-testimony {
   color: var(--font-color-white);
+  font-size: var(--size-18);
   font-style: italic;
 }
 
 p.testimony-title {
   font-size: var(--size-18);
-  margin-top: 0.3125rem;
+  margin-top: 0;
 }
 
 .hire-us-pics {
   display: flex;
+  margin-top: var(--size-50);
+  align-items: center;
+}
+
+.hire-us-pics li {
+  width: var(--size-50);
+  margin-right: var(--size-30);
+}
+
+.hire-us-pics li:last-child {
+  width: var(--size-75);
+}
+
+.hire-us-pics li img {
+  border-radius: 50%;
 }
 
 .hire-us--form {
@@ -605,29 +625,23 @@ p.testimony-title {
   grid-row: 1 / 2;
   z-index: 1;
   margin: 30px;
-  margin-left: 50px;
 }
 
 .hire-us-form-content {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   z-index: 2;
-  padding: 50px 55px 75px 75px;
+  padding: 50px 55px 75px 55px;
 }
 
-.hire-us-form-content form {
-
-}
-.hire-us-form-content form h4 {
-  font-size: var(--size-20);
-  color: var(--font-color-medium);
-  /* letter-spacing: 0.05rem; */
+p.directions {
+  font-size: var(--size-18);
   line-height: 1.5;
+  color: var(--font-color-dark);
 }
 
 .hire-us-form-content form h4,
-textarea#project-data,
-.terms p {
+textarea#project-data {
   letter-spacing: 0.05rem;
 }
 
@@ -636,8 +650,8 @@ textarea#project-data,
 .budget-country {
   display: flex;
   justify-content: space-between;
-  gap:30px;
-  margin-bottom: 30px;
+  gap: var(--size-20);
+  margin-bottom: var(--size-20);
 }
 
 .name-1 > div,
@@ -679,10 +693,25 @@ input.chkbox {
   height: 1.5rem;
 }
 p.terms-text {
-  padding-left: var(--size-20);
-  font-size: var(--size-14);
+  padding-left: var(--size-16);
+  font-size: var(--size-16);
   line-height: 1.5rem;
   color: var(--font-color-light);
+}
+
+.privacy {
+  display: flex;
+  justify-content: space-evenly;
+  text-decoration: 3px dotted underline;
+    text-underline-offset: 0.3rem;
+}
+
+.privacy a {
+  color: var(--primary-blue);
+}
+
+form button.btn-primary {
+  margin: var(--size-40) auto 0px;
 }
 
 @media screen and (max-width: 768px) {
