@@ -716,7 +716,7 @@ form button.btn-primary {
 
 .footer-nav {
   display: grid;
-  grid-template-columns: 2fr 4fr;
+  grid-template-columns: 1.8fr 4fr;
 }
 
 .footer-logo {
@@ -729,8 +729,17 @@ form button.btn-primary {
     color: var(--font-color-light);
 }
 
-.phone {
+.logo-contact address p {
+  font-style: normal;
+}
+
+.phone i {
   opacity: 70%;
+}
+
+.phone a,
+ul.features-links li a {
+  color: var(--primary-blue);
 }
 
 .logo-contact address i,
@@ -739,7 +748,55 @@ form button.btn-primary {
     margin-right: var(--size-10);
 }
 
+.footer-nav {
+  margin-top: var(--size-75);
+}
 
+.footer-nav-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: var(--size-20);
+}
+
+.footer-nav-company h4,
+.footer-nav-features h4,
+.footer-nav-documentation h4,
+.footer-nav-resources h4 {
+  font-size: var(--size-20);
+  margin-top: 0;
+}
+
+ul.company-links li,
+ul.features-links li,
+ul.documentation-links li,
+ul.resources-links li {
+  padding-bottom: var(--size-14);
+  color: var(--font-color-light);
+}
+
+ul.company-links li a {
+  font-size: var(--size-10);
+  color: var(--font-color-white);
+  background-color: var(--primary-blue);
+  padding: 3px 5px;
+  border-radius: 5px;
+  margin-left: var(--size-10);
+}
+.resources-links li {
+  display: flex;
+  align-items: center;
+}
+
+.resources-help i,
+.resources-account i {
+  margin-right: var(--size-10);
+  color: var(--font-color-light);
+}
+.resources-help p,
+.resources-account p,
+ ul.company-links li p {
+  margin: 0;
+}
 @media screen and (max-width: 768px) {
   [aria-controls='navbarDropdown'] {
     display: block;
