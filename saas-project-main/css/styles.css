@@ -675,8 +675,8 @@ textarea#project-data {
   width: 100%;
 }
 
-.entry-1 input#first-name {
-  background-image: none;
+div.entry-1 input#first-name {
+  background-image: transparent;
 }
 
 textarea#project-data {
@@ -713,6 +713,32 @@ p.terms-text {
 form button.btn-primary {
   margin: var(--size-40) auto 0px;
 }
+
+.footer-nav {
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+}
+
+.footer-logo {
+  width: 7.5rem;
+}
+
+.logo-contact address {
+  display: flex;
+    align-items: center;
+    color: var(--font-color-light);
+}
+
+.phone {
+  opacity: 70%;
+}
+
+.logo-contact address i,
+.phone i {
+  width: var(--size-16);
+    margin-right: var(--size-10);
+}
+
 
 @media screen and (max-width: 768px) {
   [aria-controls='navbarDropdown'] {
