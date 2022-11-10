@@ -32,7 +32,7 @@ header.header-container {
   position: absolute;
   top: -230px;
   left: 0;
-  background: linear-gradient(115deg, #fff 0%, #f4f4f4 75%, #e0e7ef 75%);
+  background: linear-gradient(115deg, #fff 0%, #f4f4f4 73%, #e0e7ef 73%);
   transform: skewY(-7deg);
   height: 48.5rem;
   width: 100%;
@@ -87,7 +87,7 @@ display: flex;
 .navbar-nav {
   display: flex;
   align-items: center;
-  padding-right: 10px;
+  /* padding-right: 10px; */
 }
 
 .navbar .container {
@@ -111,6 +111,10 @@ display: flex;
   line-height: 20px;
 }
 
+.nav-link.active a {
+  color: var(--primary-blue);
+}
+
 a.btn-primary {
   color: var(--font-color-white);
   font-size: var(--size-14);
@@ -130,7 +134,7 @@ a.btn-primary {
 }
 
 .hero-text {
-  padding-right: 190px;
+  padding-right: 170px;
 }
 .hero-text h1 {
   font-weight: 400;
@@ -193,44 +197,94 @@ a.video-btn.btn-primary p {
 
 .google.icon-small {
 position:absolute;
-top: 0;
-left: 60px;
+left: 20px;
+animation-name: google;
+animation-duration: 1s;
+animation-fill-mode: forwards;
+}
+
+@keyframes google {
+  from {top: 50px; opacity: 0%;}
+  to {top: 0px; opacity: 100%;}
 }
 
 .atlassian.icon-large {
   position: absolute;
-  top: 0;
-  left: 190px;
+  left: 150px;
+  animation-name: atlassian;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes atlassian {
+  from {top: 50px; opacity: 0%;}
+  to {top: 0px; opacity: 100%;}
 }
 
 .asana.icon-large {
   position:absolute;
-  top: 0;
-  right: 0;
+  right: 0px;
+  animation-name: asana;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes asana {
+  from {top: 50px; opacity: 0%;}
+  to {top: 0px; opacity: 100%;}
 }
 
 .paypal.icon-large {
   position:absolute;
-  top: 40%;
-  left: 25px;
+  bottom: 175px;
+  left: 0px;
+  animation-name: paypal;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes paypal {
+  from {bottom: 125px; opacity: 0%;}
+  to {bottom:175px; opacity: 100%;}
 }
 
 .weave.icon-large {
   position: absolute;
-  top: 40%;
   right: 135px;
+  animation-name: weave;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes weave {
+  from {bottom: 125px; opacity: 0%;}
+  to {bottom:175px; opacity: 100%;}
 }
 
 .google-a.icon-small {
   position:absolute;
-  bottom:40px;
-  left: 150px;
+  left: 100px;
+  animation-name: google-a;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes google-a {
+  from {bottom: -10px; opacity: 0%;}
+  to {bottom:40px; opacity: 100%;}
 }
 
 .calendar.icon-large {
   position:absolute;
-  bottom:0;
-  right: 20px;
+  right: 25px;
+  animation-name: calendar;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes calendar {
+  from {bottom: -50px; opacity: 0%;}
+  to {bottom:0px; opacity: 100%;}
 }
 
 .benefits {
@@ -264,6 +318,10 @@ left: 60px;
 .benefit-card {
   padding: 20px;
   box-shadow: 0px 4px 10px rgba( 48 63 100 / 15%);
+}
+
+.benefit-card:hover {
+  background-color: var(--circle-fill-lightblue);
 }
 
 .benefit-image {
@@ -307,7 +365,7 @@ a.sketch-btn {
 }
 
 .perspectives--text {
-  padding: var(--size-40);
+  padding: var(--size-40) var(--size-30);
 }
 
 .perspectives--text h2 {
@@ -317,7 +375,7 @@ a.sketch-btn {
 
 a.video-btn.btn-primary {
   display: inline-block;
-  margin-top: var(--size-10);
+  /* margin-top: var(--size-10); */
 }
 
 .why--text {
@@ -408,7 +466,7 @@ color: var(--font-color-medium);
   width: 45%;
     position: absolute;
     left: 0;
-    bottom: -65px;
+    bottom: -55px;
     z-index: -1;
 }
 
@@ -534,7 +592,7 @@ p.no-cc {
 }
 
 .factor h4 {
-  font-size: 24px;
+  font-size: var(--size-20);
   letter-spacing: 1.1px;
 }
 
@@ -774,6 +832,11 @@ ul.resources-links li {
   color: var(--font-color-light);
 }
 
+ul.company-links li {
+  display: flex;
+  align-items: center;
+}
+
 ul.company-links li a {
   font-size: var(--size-10);
   color: var(--font-color-white);
@@ -797,6 +860,75 @@ ul.company-links li a {
  ul.company-links li p {
   margin: 0;
 }
+
+.footer-hr {
+  border-top: 1px solid #ddd;
+  margin: var(--size-40) 0;
+}
+
+.social-connections {
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-map {
+  color: var(--font-color-light);
+}
+
+.site-map span {
+  color: var(--primary-blue);
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons i {
+  background-color: var(--icon-fill-light);
+  border-radius: 8px;
+  color: var(--font-color-light);
+  width: 40px;
+  height: 40px;
+  line-height: 2.5;
+  text-align: center;
+  margin-right: var(--size-20);
+}
+
+.social-icons i.fa-brands.fa-google {
+  background-color: var(--icon-fill-dark);
+  color: var(--icon-fill-light);
+}
+
+.location-icon {
+  padding: var(--size-10) var(--size-14);
+    background-color: var(--icon-fill-light);
+    width: 12.5rem;
+    border-radius: 8px;
+}
+
+select#user-country {
+  border: none;
+  background-color: var(--icon-fill-light);
+  width: 100%;
+  font-size: var(--size-16);
+  color: var(--font-color-light);
+}
+
+.copyright-cookies {
+  text-align: center;
+  color: var(--font-color-light);
+  margin-right: var(--size-40);
+}
+
+.cookies {
+  margin-top: var(--size-30);
+}
+
 @media screen and (max-width: 768px) {
   [aria-controls='navbarDropdown'] {
     display: block;
