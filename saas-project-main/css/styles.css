@@ -993,6 +993,10 @@ ul.learn-links {
 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
+.perspectives {
+  padding-top: 0;
+}
+
 .perspectives--text {
   text-align: center;
 }
@@ -1104,5 +1108,81 @@ p.director-title {
 }
 p.cookies {
   line-height: 1.5;
+}
+}
+
+@media screen and (max-width: 360px) {
+.geo-image {
+  background: linear-gradient(100deg, #fff 0%, #f4f4f4 75%, #e0e7ef 75%);
+  transform: skewY(-20deg);
+  height: 46rem;
+}
+
+.navbar-toggler {
+  top: 24px;
+  right: 30px;
+}
+
+.navbar-toggler span {
+  font-size: var(--size-30);
+}
+
+.container {
+  padding: var(--size-20);
+}
+.header-hero.container {
+  grid-template-columns: none;
+}
+.hero-text {
+  height: 17rem;
+}
+.hero-text h1 {
+  padding: 0;
+  font-size: 1.6rem;
+  margin-top: 0;
+}
+
+.icon-group {
+  margin: 0;
+  height: 19rem;
+}
+
+.icon-small {
+  width: 4rem;
+  height: 4rem;
+}
+.icon-large {
+  width: 5rem;
+  height: 5rem;
+  padding: var(--size-16);
+}
+
+.google.icon-small {
+left: -5px;
+}
+
+.atlassian.icon-large {
+left: 100px;
+}
+
+.paypal.icon-large {
+  top: 100px;
+}
+@keyframes paypal {
+  from {top: 150px; opacity: 0%;}
+  to {top:100px; opacity: 100%;}
+}
+
+.weave.icon-large {
+  right: 60px;
+}
+
+@keyframes weave {
+  from {top: 150px; opacity: 0%;}
+  to {top:100px; opacity: 100%;}
+}
+
+.calendar.icon-large {
+  right: 5px;
 }
 }
