@@ -28,6 +28,7 @@ header.header-container {
   position: relative;
   /* height: 75rem; */
 }
+
 .geo-image{
   position: absolute;
   top: -230px;
@@ -39,8 +40,6 @@ header.header-container {
   z-index: -1;
 }
 
-
-
 .container {
   width: 100%;
   padding: var(--size-20) var(--size-30);
@@ -49,7 +48,6 @@ header.header-container {
 }
 .navbar {
 display: flex;
-
 }
 
 .navbar.sticky {
@@ -84,15 +82,14 @@ display: flex;
   display: none;
 }
 
-.navbar-nav {
-  display: flex;
-  align-items: center;
-  padding-right: 10px;
-}
-
+.navbar-nav,
 .navbar .container {
   display: flex;
   align-items: center;
+}
+
+.navbar-nav{
+  padding-right: 10px;
 }
 
 .navbar-brand {
@@ -121,23 +118,18 @@ a.btn-primary {
   margin-right: 0;
 }
 
-.header-hero {
-  /* height: 31.875rem; */
-}
-
 .header-hero.container{
   display: grid;
-  /* grid-template-columns: 1fr 1fr; */
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   padding-top: var(--size-40);
   padding-bottom: 0;
-  /* height: inherit; */
 }
 
 .hero-text {
   padding-right: 10.625rem;
   height: 30rem;
 }
+
 .hero-text h1 {
   font-weight: 400;
   font-size: 2.5rem;
@@ -151,11 +143,7 @@ a.btn-primary {
   margin-bottom: 3rem;
 }
 
-.learn-links {
-  display: flex;
-  align-items: center;
-}
-
+.learn-links,
 .learn-links a.video-btn.btn-primary {
   display: flex;
   align-items: center;
@@ -181,30 +169,41 @@ a.video-btn.btn-primary p {
   position: relative;
   height: 30rem;
 }
+
+.icon-small,
+.icon-large {
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px 2px #bfc5cb;
+}
+
 .icon-small {
   width: 4.35rem;
   height: 4.35rem;
   padding: var(--size-10);
-  background-color: #fff;
-  border-radius: 50%;
-  box-shadow: 2px 2px 8px 2px #bfc5cb;
 }
 
 .icon-large {
   width: 5.975rem;
   height: 5.975rem;
   padding: var(--size-20);
-  background-color: #fff;
-  border-radius: 50%;
-  box-shadow: 2px 2px 8px 2px #bfc5cb;
+}
+
+.google.icon-small,
+.atlassian.icon-large,
+.asana.icon-large,
+.paypal.icon-large,
+.weave.icon-large,
+.google-a.icon-small,
+.calendar.icon-large {
+  position:absolute;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 .google.icon-small {
-position:absolute;
 left: 20px;
 animation-name: google;
-animation-duration: 1s;
-animation-fill-mode: forwards;
 }
 
 @keyframes google {
@@ -213,11 +212,8 @@ animation-fill-mode: forwards;
 }
 
 .atlassian.icon-large {
-  position: absolute;
   left: 150px;
   animation-name: atlassian;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
 }
 
 @keyframes atlassian {
@@ -226,11 +222,8 @@ animation-fill-mode: forwards;
 }
 
 .asana.icon-large {
-  position:absolute;
   right: 0px;
   animation-name: asana;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
 }
 
 @keyframes asana {
@@ -239,12 +232,9 @@ animation-fill-mode: forwards;
 }
 
 .paypal.icon-large {
-  position:absolute;
   bottom: 175px;
   left: 0px;
   animation-name: paypal;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
 }
 
 @keyframes paypal {
@@ -253,11 +243,8 @@ animation-fill-mode: forwards;
 }
 
 .weave.icon-large {
-  position: absolute;
   right: 135px;
   animation-name: weave;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
 }
 
 @keyframes weave {
@@ -266,11 +253,8 @@ animation-fill-mode: forwards;
 }
 
 .google-a.icon-small {
-  position:absolute;
   left: 100px;
   animation-name: google-a;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
 }
 
 @keyframes google-a {
@@ -279,11 +263,8 @@ animation-fill-mode: forwards;
 }
 
 .calendar.icon-large {
-  position:absolute;
   right: 25px;
   animation-name: calendar;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
 }
 
 @keyframes calendar {
@@ -843,7 +824,7 @@ ul.resources-links li {
   color: var(--font-color-light);
 }
 
-ul.company-links li {
+ul.company-links li.career-hiring {
   display: flex;
   align-items: center;
 }
@@ -972,6 +953,20 @@ select#user-country {
     color: #666;
   }
 
+  .geo-image {
+    background: linear-gradient(100deg, #fff 0%, #f4f4f4 75%, #e0e7ef 75%);
+    transform: skewY(-7deg);
+    /* height: 46rem; */
+  }
+
+  .navbar-toggler {
+    top: 24px;
+    right: 30px;
+  }
+  
+  .navbar-toggler span {
+    font-size: var(--size-30);
+  }
 
   .hero-text {
     text-align: center;
@@ -989,6 +984,10 @@ ul.learn-links {
   height: 24rem;
 }
 
+.atlassian.icon-large {
+  left: 200px;
+}
+
 .benefits--cards {
 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
@@ -998,6 +997,7 @@ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .perspectives--text {
+  grid-template-columns: none;
   text-align: center;
 }
 
@@ -1055,12 +1055,19 @@ p.director-title {
 .company-users {
   margin-bottom: var(--size-16);
 }
+
 .pricing--info {
   grid-template-columns: none;
 }
+
+.price-card p {
+  font-size: var(--size-18);
+}
+
 .price-lead {
   justify-content: center;
 }
+
 .pricing-video-block {
   text-align: center;
 }
@@ -1068,6 +1075,11 @@ p.director-title {
 .price-factors {
   margin-bottom: var(--size-50);
 }
+
+.factor p {
+  font-size: var(--size-16);
+}
+
 .hire-us--container {
   grid-template-columns: none;
 }
@@ -1087,6 +1099,14 @@ p.director-title {
 
 .hire-us-testimony {
   padding-right: var(--size-75);
+}
+
+.ul.hire-us-pics {
+  margin-top: var(--size-20);
+}
+
+textarea#project-data {
+  padding-right: 14rem;
 }
 
 .footer-nav {
@@ -1135,6 +1155,7 @@ p.cookies {
 }
 .hero-text {
   height: 17rem;
+  padding: 0px var(--size-10);
 }
 .hero-text h1 {
   padding: 0;
@@ -1184,5 +1205,234 @@ left: 100px;
 
 .calendar.icon-large {
   right: 5px;
+}
+
+section.benefits {
+  margin-top: var(--size-50);
+}
+
+.benefits--cards {
+  margin: var(--size-50) 0px;
+}
+
+.perspectives {
+  grid-template-columns: none;
+}
+
+.perspectives--text h2 {
+  margin-top: 0;
+    padding: 0px 7px;
+}
+
+.perspectives--banner img {
+  margin: 0px 0px -1rem 0px;
+}
+
+.why--text p {
+  line-height: 1.5;
+}
+
+.component-timeline {
+  margin-bottom: 4rem;
+}
+
+.timeline li {
+  float: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.timeline li::before {
+  margin: var(--size-10) var(--size-20);
+}
+
+.timeline li::after {
+  display: none;
+}
+
+.why--video {
+  height: 12rem;
+  margin-left: -1.3rem;
+  width: 360px;
+}
+
+.testimonial {
+  margin-top: var(--size-40);
+}
+
+.testimonial--image {
+  margin: 0;
+}
+
+.dots {
+  bottom: -40px;
+}
+
+.director-image {
+  margin-right: 0;
+  width: 90%;
+}
+
+.testimonial-container {
+  margin-top: var(--size-40);
+}
+
+.hubspot-logo {
+  width: 30%;
+}
+
+p.testimonial-words {
+  padding: 0;
+}
+
+.trusted-users h3 {
+  margin-bottom: var(--size-30);
+}
+
+.company-users {
+  display: block;
+  width: 30%;
+  margin: 0 auto;
+}
+.company-user {
+  margin-top: var(--size-20);
+}
+
+.pricing-heading p {
+  font-size: var(--size-16);
+}
+
+.pricing--info {
+  display: block;
+}
+
+.price-card p {
+  font-size: var(--size-16);
+}
+
+.price-factors {
+  display: block;
+}
+
+.factor {
+  margin-top: var(--size-75);
+}
+
+.factor p {
+  padding-right: 0;
+}
+
+.hire-us--container {
+  display: block;
+}
+
+.hire-us--text {
+  display: block;
+  padding: var(--size-20);
+  text-align: center;
+}
+ .hire-us-text-1 p {
+  font-size: var(--size-16);
+ }
+
+ hr.hire-us-hr {
+  width: 100%;
+ }
+
+ p.hire-us-testimony {
+  padding: 0 var(--size-10);
+ }
+
+ ul.hire-us-pics {
+  margin: var(--size-30) var(--size-30) 0;
+ }
+
+ ul.hire-us-pics li {
+  margin: 0 auto;
+ }
+
+ .form-background {
+  margin: var(--size-30) var(--size-20);
+ }
+ .name-1, 
+ .name-2, 
+ .budget-country {
+  display: block;
+}
+
+.entry-1,
+.entry-3,
+.budget {
+  margin-bottom: var(--size-20);
+}
+
+a.policy-2 {
+  display: none;
+}
+
+.footer-nav {
+  display: block;
+}
+
+.footer-nav-links {
+  display: block;
+}
+
+.footer-logo {
+  margin: 0 auto;
+}
+
+.logo-contact {
+  margin-bottom: var(--size-50);
+}
+
+.logo-contact address {
+  justify-content: center;
+}
+
+.phone {
+  text-align: center;
+}
+
+.footer-nav-company,
+.footer-nav-features,
+.footer-nav-documentation,
+.footer-nav-resources {
+  text-align: center;
+}
+
+li.career-hiring,
+.resources-help,
+.resources-account {
+  justify-content: center;
+}
+
+.footer-nav-links h4 {
+  margin-top: var(--size-20);
+  margin-bottom: var(--size-14);
+}
+
+.social-connections,
+.social-links {
+  display: block;
+}
+
+.site-map {
+  text-align: center;
+  margin-bottom: var(--size-30);
+}
+
+.social-icons {
+  justify-content: center;
+  margin-bottom: var(--size-30);
+}
+
+.location-icon {
+  margin: 0 auto;
+}
+
+.copyright-cookies {
+  margin: var(--size-40) 0;
 }
 }
